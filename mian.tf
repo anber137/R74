@@ -2,13 +2,8 @@ terraform {
   required_version = ">= 0.12"
 }
 
-variable "aws_region" {
-  description = "The AWS region to create things in."
-  default     = "us-west-2"
-}
-
 provider "aws" {
-  region = var.aws_region
+  region = "us-west-2"
 }
 data "aws_ami" "amazon_linux" {
   most_recent = true
